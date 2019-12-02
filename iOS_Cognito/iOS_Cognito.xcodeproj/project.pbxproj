@@ -10,7 +10,7 @@
 		267038DA2395C92F0009E129 /* CognitoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267038D92395C92F0009E129 /* CognitoConfig.swift */; };
 		267038DC2395C94B0009E129 /* CognitoConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 267038DB2395C94B0009E129 /* CognitoConfig.plist */; };
 		26EDD7952395B933002DB5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EDD7942395B933002DB5A8 /* AppDelegate.swift */; };
-		26EDD7972395B933002DB5A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EDD7962395B933002DB5A8 /* ViewController.swift */; };
+		26EDD7972395B933002DB5A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EDD7962395B933002DB5A8 /* LoginViewController.swift */; };
 		26EDD79A2395B933002DB5A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26EDD7982395B933002DB5A8 /* Main.storyboard */; };
 		26EDD79C2395B933002DB5A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26EDD79B2395B933002DB5A8 /* Assets.xcassets */; };
 		26EDD79F2395B933002DB5A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26EDD79D2395B933002DB5A8 /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		267038DB2395C94B0009E129 /* CognitoConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CognitoConfig.plist; sourceTree = "<group>"; };
 		26EDD7912395B933002DB5A8 /* iOS_Cognito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Cognito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26EDD7942395B933002DB5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		26EDD7962395B933002DB5A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		26EDD7962395B933002DB5A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		26EDD7992395B933002DB5A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26EDD79B2395B933002DB5A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26EDD79E2395B933002DB5A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +53,14 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		267038DE2395D33A0009E129 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				26EDD7962395B933002DB5A8 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		26EDD7882395B933002DB5A8 = {
 			isa = PBXGroup;
 			children = (
@@ -74,9 +82,9 @@
 		26EDD7932395B933002DB5A8 /* iOS_Cognito */ = {
 			isa = PBXGroup;
 			children = (
+				267038DE2395D33A0009E129 /* ViewController */,
 				267038D82395C58A0009E129 /* Config */,
 				26EDD7942395B933002DB5A8 /* AppDelegate.swift */,
-				26EDD7962395B933002DB5A8 /* ViewController.swift */,
 				26EDD7982395B933002DB5A8 /* Main.storyboard */,
 				26EDD79B2395B933002DB5A8 /* Assets.xcassets */,
 				26EDD79D2395B933002DB5A8 /* LaunchScreen.storyboard */,
@@ -218,7 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26EDD7972395B933002DB5A8 /* ViewController.swift in Sources */,
+				26EDD7972395B933002DB5A8 /* LoginViewController.swift in Sources */,
 				267038DA2395C92F0009E129 /* CognitoConfig.swift in Sources */,
 				26EDD7952395B933002DB5A8 /* AppDelegate.swift in Sources */,
 			);

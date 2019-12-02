@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import AWSCognitoIdentityProvider
+
+let userPoolID = "test_pool"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    class func defaultUserPool() -> AWSCognitoIdentityUserPool {
+        return AWSCognitoIdentityUserPool(forKey: userPoolID)
+    }
     var window: UIWindow?
-
+    var loginViewController: LoginViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
