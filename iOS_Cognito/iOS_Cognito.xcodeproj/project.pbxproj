@@ -3,18 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		267038DA2395C92F0009E129 /* CognitoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267038D92395C92F0009E129 /* CognitoConfig.swift */; };
+		267038DC2395C94B0009E129 /* CognitoConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 267038DB2395C94B0009E129 /* CognitoConfig.plist */; };
 		26EDD7952395B933002DB5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EDD7942395B933002DB5A8 /* AppDelegate.swift */; };
 		26EDD7972395B933002DB5A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EDD7962395B933002DB5A8 /* ViewController.swift */; };
 		26EDD79A2395B933002DB5A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26EDD7982395B933002DB5A8 /* Main.storyboard */; };
 		26EDD79C2395B933002DB5A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26EDD79B2395B933002DB5A8 /* Assets.xcassets */; };
 		26EDD79F2395B933002DB5A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26EDD79D2395B933002DB5A8 /* LaunchScreen.storyboard */; };
+		9F6DD3951661E2EDCC6767D5 /* Pods_iOS_Cognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1AEBECF9D915B927397E3F /* Pods_iOS_Cognito.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		267038D92395C92F0009E129 /* CognitoConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoConfig.swift; sourceTree = "<group>"; };
+		267038DB2395C94B0009E129 /* CognitoConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CognitoConfig.plist; sourceTree = "<group>"; };
 		26EDD7912395B933002DB5A8 /* iOS_Cognito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Cognito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26EDD7942395B933002DB5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26EDD7962395B933002DB5A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		26EDD79B2395B933002DB5A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26EDD79E2395B933002DB5A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26EDD7A02395B933002DB5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C1AEBECF9D915B927397E3F /* Pods_iOS_Cognito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Cognito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D03D9A73985F250E45EFB18 /* Pods-iOS_Cognito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Cognito.release.xcconfig"; path = "Target Support Files/Pods-iOS_Cognito/Pods-iOS_Cognito.release.xcconfig"; sourceTree = "<group>"; };
+		EAB19A842869622861CCC2F6 /* Pods-iOS_Cognito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Cognito.debug.xcconfig"; path = "Target Support Files/Pods-iOS_Cognito/Pods-iOS_Cognito.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F6DD3951661E2EDCC6767D5 /* Pods_iOS_Cognito.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		267038D82395C58A0009E129 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				267038D92395C92F0009E129 /* CognitoConfig.swift */,
+				267038DB2395C94B0009E129 /* CognitoConfig.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		26EDD7882395B933002DB5A8 = {
 			isa = PBXGroup;
 			children = (
 				26EDD7932395B933002DB5A8 /* iOS_Cognito */,
 				26EDD7922395B933002DB5A8 /* Products */,
+				E427C6526102DDC94B08D944 /* Pods */,
+				F54D060C6C7A6CC6159531CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +74,7 @@
 		26EDD7932395B933002DB5A8 /* iOS_Cognito */ = {
 			isa = PBXGroup;
 			children = (
+				267038D82395C58A0009E129 /* Config */,
 				26EDD7942395B933002DB5A8 /* AppDelegate.swift */,
 				26EDD7962395B933002DB5A8 /* ViewController.swift */,
 				26EDD7982395B933002DB5A8 /* Main.storyboard */,
@@ -64,6 +85,23 @@
 			path = iOS_Cognito;
 			sourceTree = "<group>";
 		};
+		E427C6526102DDC94B08D944 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAB19A842869622861CCC2F6 /* Pods-iOS_Cognito.debug.xcconfig */,
+				6D03D9A73985F250E45EFB18 /* Pods-iOS_Cognito.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F54D060C6C7A6CC6159531CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C1AEBECF9D915B927397E3F /* Pods_iOS_Cognito.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26EDD7A32395B933002DB5A8 /* Build configuration list for PBXNativeTarget "iOS_Cognito" */;
 			buildPhases = (
+				26A30DE6682755F6C66CDF40 /* [CP] Check Pods Manifest.lock */,
 				26EDD78D2395B933002DB5A8 /* Sources */,
 				26EDD78E2395B933002DB5A8 /* Frameworks */,
 				26EDD78F2395B933002DB5A8 /* Resources */,
+				8EE04B0CBD530FA31D8D7677 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,11 +164,54 @@
 			files = (
 				26EDD79F2395B933002DB5A8 /* LaunchScreen.storyboard in Resources */,
 				26EDD79C2395B933002DB5A8 /* Assets.xcassets in Resources */,
+				267038DC2395C94B0009E129 /* CognitoConfig.plist in Resources */,
 				26EDD79A2395B933002DB5A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26A30DE6682755F6C66CDF40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS_Cognito-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EE04B0CBD530FA31D8D7677 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_Cognito/Pods-iOS_Cognito-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_Cognito/Pods-iOS_Cognito-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS_Cognito/Pods-iOS_Cognito-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		26EDD78D2395B933002DB5A8 /* Sources */ = {
@@ -136,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26EDD7972395B933002DB5A8 /* ViewController.swift in Sources */,
+				267038DA2395C92F0009E129 /* CognitoConfig.swift in Sources */,
 				26EDD7952395B933002DB5A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +364,7 @@
 		};
 		26EDD7A42395B933002DB5A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB19A842869622861CCC2F6 /* Pods-iOS_Cognito.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +383,7 @@
 		};
 		26EDD7A52395B933002DB5A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D03D9A73985F250E45EFB18 /* Pods-iOS_Cognito.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

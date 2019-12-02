@@ -6,5 +6,6 @@ target 'iOS_Cognito' do
   use_frameworks!
 
   # Pods for iOS_Cognito
-
+  pod 'AWSCore'
+  pod 'AWSCognitoIdentityProvider'
 end
