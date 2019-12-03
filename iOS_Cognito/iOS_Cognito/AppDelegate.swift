@@ -18,13 +18,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return AWSCognitoIdentityUserPool(forKey: userPoolID)
     }
     var window: UIWindow?
+    
     var loginViewController: LoginViewController?
+    
+    var navigationController: UINavigationController?
+    
+    var cognitoConfig: CognitoConfig?
+    
+    var storyboard: UIStoryboard? {
+        return UIStoryboard(name: "Main", bundle: nil)
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // setup logging
+        AWSDDLog.sharedInstance.logLevel = .verbose
+        AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
+        
+        // setup cognito config
+        self.cognitoConfig = CognitoConfig()
+        
+        // setup cognito
+        setupCognitoUserPool()
+        
+        //Override point for customization after application launch.
+        
         return true
     }
 
+    func setupCognitoUserPool() { 
+        let clientId:String = self.cognitoConfig!.getClientId()
+        let poolId:String = self.cognitoConfig!.getPoolId()
+        let region:AWSRegionType = self.cognitoConfig!.getRegion()
+        
+        let serviceConfiguration: AWSServiceConfiguration = AWSServiceConfiguration(region: region, credentialsProvider: nil)
+        let cognitoConfiguration: AWSCognitoIdentityUserPoolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: clientId, clientSecret: nil , poolId: poolId)
+        AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: cognitoConfiguration, forKey: userPoolID)
+        let pool:AWSCognitoIdentityUserPool = AppDelegate.defaultUserPool()
+        pool.delegate = self
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -47,6 +80,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+}
 
+extension AppDelegate: AWSCognitoIdentityInteractiveAuthenticationDelegate {
+    func startPasswordAuthentication() -> AWSCognitoIdentityPasswordAuthentication {
+        if(self.navigationController == nil) {
+            self.navigationController = self.window?.rootViewController as? UINavigationController
+        }
+        
+        if(self.loginViewController == nil) {
+            self.loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+        }
+        
+        DispatchQueue.main.async {
+            if(self.loginViewController!.isViewLoaded || self.loginViewController!.view.window == nil) {
+                self.navigationController?.present(self.loginViewController!, animated: true, completion: nil)
+            }
+        }
+        return self.loginViewController!
+    }
 }
 
